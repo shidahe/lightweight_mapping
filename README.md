@@ -3,7 +3,8 @@ This is the webpage of the open-source packages of our paper submitted to IROS20
 We will release our source code if our conference paper is accepted. Our implementation is on ROS (version of indigo). OpenCV and Eigen are needed.
 
 The high resolution video of our submitted paper is: 
-https://www.dropbox.com/s/nlbpg1h942z0aaf/iros2017.mp4?dl=0
+https://1drv.ms/v/s!ApzRxvwAxXqQmRtBPbu_Q27V5o4f
+(720p is recommmanded)
 
 If you use our code, please cite our paper:
 
