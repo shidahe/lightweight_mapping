@@ -8,7 +8,7 @@ To run this code, complie it with ROS in linux system, and type:
 
 rosrun light_mapping ros_stereo_kitti 
 
-It will run configuration file in the config folder, such as KITTI05.yaml.
+It will read the configuration file in the config folder, such as KITTI05.yaml. Please adjust it accordingly to your environment.
 
 The source code is released under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) license.
 If you use our code, please cite our paper:
