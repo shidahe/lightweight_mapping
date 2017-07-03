@@ -1,0 +1,1 @@
+/home/ygling2008/catkin_ws/src/orb_slam/Thirdparty/DBoW2/build/CMakeFiles/DBoW2.dir

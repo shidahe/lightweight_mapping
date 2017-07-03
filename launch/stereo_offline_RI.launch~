@@ -1,0 +1,5 @@
+<launch>
+ 	<node pkg="orb_slam2" type="ros_stereo_offline" name="orb_slam2" args="$(find orb_slam2)/Vocabulary/ORBvoc.bin $(find orb_slam2)/config/stereo_RI.yaml" output="screen">
+   </node>
+
+</launch>

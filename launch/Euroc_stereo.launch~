@@ -1,0 +1,5 @@
+<launch>
+ 	<node pkg="orb_slam2" type="stereo" name="orb_slam2" args="$(find orb_slam2)/Vocabulary/ORBvoc.bin $(find orb_slam2)/config/EuRoC_stereo_orginal.yaml" output="screen">
+   </node>
+
+</launch>

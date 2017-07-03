@@ -1,0 +1,138 @@
+%YAML:1.0
+
+# Bag Info
+preRectified: 0
+startTime: 1
+bagPath: "/home/ygling2008/testdata/AR_data/roundwalk.bag"
+flipStereo: 1
+
+# Debug Info
+displayViewer: 1
+
+# Mesh parameters
+renderingK: 100
+displayDelaunyResult: 1
+displayCenterFrame: 1
+displayUnOptimizedPoints: 0
+meshSubdivNum: 0
+pointQualityThreshold: 0.03
+cvWaitTime: 1
+pointUpdateThreshold: 0.1
+constraintUpdateThreshold: 0.1
+distanceThreshold: 0.1
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 453.327266
+Camera.fy: 453.327266
+Camera.cx: 361.235592
+Camera.cy: 223.585726
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+Camera.width: 752
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 20.0
+
+# stereo baseline times fx
+Camera.bf: 49.86599926
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 35
+
+#--------------------------------------------------------------------------------------------
+# Stereo Rectification. Only if you need to pre-rectify the images.
+# Camera.fx, .fy, etc must be the same as in LEFT.P
+#--------------------------------------------------------------------------------------------
+LEFT.height: 480
+LEFT.width: 752
+LEFT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data:[-0.294144, 0.087365, -0.000173, 1.1e-05, 0]
+LEFT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [470.170073, 0, 382.806247, 0, 469.844934, 216.276072, 0, 0, 1]
+LEFT.R:  !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [0.999879, 0.000283, 0.015575, -0.000278, 1, -0.000303, -0.015575, 0.000299, 0.999879]
+LEFT.P:  !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [453.327266, 0, 361.235592, 0, 0, 453.327266, 223.585726, 0, 0, 0, 1, 0]
+
+RIGHT.height: 480
+RIGHT.width: 752
+RIGHT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [-0.299187, 0.095467, -0.000298, -0.000181, 0]
+RIGHT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [470.877383, 0, 352.01427, 0, 470.501676, 230.927551, 0, 0, 1]
+RIGHT.R:  !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [0.999996, 0.00204, 0.002062, -0.002041, 0.9999979999999999, 0.000299, -0.002061, -0.000303, 0.9999979999999999]
+RIGHT.P:  !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [453.327266, 0, 361.235592, -49.813913, 0, 453.327266, 223.585726, 0, 0, 0, 1, 0]
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 12
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.MeshLineWidth: 0.8
+Viewer.PointSize: 10
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+
